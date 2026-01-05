@@ -1,0 +1,200 @@
+.profile-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: rgba(15, 15, 35, 0.6);
+  backdrop-filter: blur(10px);
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.profile-header {
+  padding: 32px 40px;
+  border-bottom: 1px solid rgba(102, 126, 234, 0.2);
+  background: rgba(26, 26, 46, 0.8);
+  backdrop-filter: blur(20px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.profile-header h2 {
+  font-size: 32px;
+  font-weight: 800;
+  color: #e4e4e4;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: -1px;
+}
+
+.profile-edit-button {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  font-size: 15px;
+  box-shadow: 0 4px 16px rgba(102, 126, 234, 0.4);
+}
+
+.profile-edit-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(102, 126, 234, 0.5);
+}
+
+.profile-content {
+  padding: 48px;
+  max-width: 900px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.profile-avatar-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 48px;
+}
+
+.profile-avatar {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 6px solid #667eea;
+  box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.3), 0 8px 32px rgba(102, 126, 234, 0.4);
+  transition: all 0.3s;
+}
+
+.profile-avatar:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.5), 0 12px 40px rgba(102, 126, 234, 0.5);
+}
+
+.profile-picture-input {
+  width: 100%;
+  max-width: 500px;
+  padding: 14px 20px;
+  background: rgba(26, 26, 46, 0.8);
+  border: 2px solid rgba(102, 126, 234, 0.2);
+  border-radius: 16px;
+  color: #e4e4e4;
+  font-size: 15px;
+  outline: none;
+  transition: all 0.3s;
+  font-weight: 500;
+}
+
+.profile-picture-input:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.15);
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.profile-field {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.profile-field label {
+  font-size: 14px;
+  font-weight: 700;
+  color: #94a3b8;
+  letter-spacing: 0.3px;
+}
+
+.profile-value {
+  font-size: 17px;
+  color: #e4e4e4;
+  padding: 14px 0;
+  font-weight: 600;
+}
+
+.profile-input,
+.profile-textarea {
+  padding: 16px 20px;
+  background: rgba(26, 26, 46, 0.8);
+  border: 2px solid rgba(102, 126, 234, 0.2);
+  border-radius: 16px;
+  color: #e4e4e4;
+  font-size: 15px;
+  outline: none;
+  font-family: inherit;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+
+.profile-input:focus,
+.profile-textarea:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.15);
+  background: rgba(26, 26, 46, 0.95);
+}
+
+.profile-textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.profile-stats {
+  display: flex;
+  gap: 48px;
+  margin-top: 32px;
+  padding-top: 32px;
+  border-top: 1px solid rgba(102, 126, 234, 0.2);
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.stat-value {
+  font-size: 32px;
+  font-weight: 800;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.stat-label {
+  font-size: 14px;
+  color: #94a3b8;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* Scrollbar */
+.profile-container::-webkit-scrollbar {
+  width: 10px;
+}
+
+.profile-container::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.profile-container::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 5px;
+}
+
+.profile-container::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+}
